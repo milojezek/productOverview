@@ -50,9 +50,4 @@ class OverviewViewModel : ViewModel() {
             _hearts.value?.add(false)
         }
     }
-
-    fun setFavourite() {
-
-    }
-
 }
