@@ -17,15 +17,11 @@ enum class ProductApiStatus { LOADING, ERROR, DONE }
 
 class OverviewViewModel : ViewModel() {
 
-    // The internal MutableLiveData that stores the status of the most recent request
     private val _status = MutableLiveData<ProductApiStatus>()
     val status: LiveData<ProductApiStatus> = _status
 
     private val _products = MutableLiveData<List<Product>>()
     val products: LiveData<List<Product>> = _products
-
-    private val _hearts = MutableLiveData<MutableList<Boolean>>()
-    val hearts: LiveData<MutableList<Boolean>> = _hearts
 
     init {
         getProducts()
